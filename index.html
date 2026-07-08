@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gawe Mbak N ❤️</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💙</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Aurora Background -->
+  <div class="aurora"></div>
+
+  <!-- Floating Particles -->
+  <div class="particles-container"></div>
+
+  <!-- Hearts Canvas -->
+  <canvas id="hearts-canvas"></canvas>
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ========== START SCREEN ========== -->
+  <div class="start-screen" id="start-screen">
+    <div class="start-content">
+      <div class="start-emoji">💙</div>
+      <p class="start-text">pinek en<br>nde kene</p>
+      <button class="start-button" id="start-btn">
+        kene <span class="heart-icon">❤️</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-content">
+      <div class="loading-emoji">💙</div>
+      <p class="loading-text">Sekk sabarr...</p>
+      <div class="loading-bar-wrap">
+        <div class="loading-bar" id="loading-bar"></div>
+      </div>
+      <p class="loading-percent" id="loading-percent">0%</p>
+    </div>
+  </div>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <div class="main-content" id="main-content">
+
+    <!-- ═══════ HERO: Foto utama ═══════ -->
+    <section class="story-section hero-section" id="section-hero">
+      <div class="hero-card">
+        <div class="hero-photo-frame">
+          <img src="assets/images/oii.jpeg" alt="Kami" class="hero-photo" loading="eager" />
+          <div class="hero-photo-border"></div>
+        </div>
+        <h1 class="hero-title">Our</h1>
+        <p class="hero-subtitle">Ayok gawe momen neh</p>
+      </div>
+    </section>
+
+    <!-- ═══════ Blok 1: Awal ═══════ -->
+    <section class="story-section" id="section-beginning">
+      <div class="story-card">
+        <div class="section-emoji">🌸</div>
+        <h2 class="section-title">Ingat, semuanya dimulai dari sini…</h2>
+        <p class="section-text">
+          Satu tatapan saja sudah cukup untuk mengubah segalanya. Jantungku
+          berdegup lebih cepat, dan aku sadar bahwa di sisimu — <em>aku menemukan
+          tempat yang ingin aku tinggali</em>. Saat itulah dunia terasa begitu berbeda.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ Foto-blok 1: Momen awal (3 foto) ═══════ -->
+    <section class="story-section photo-grid-section" id="section-grid1">
+      <div class="photo-grid-container">
+        <h2 class="photo-grid-title">Momen pertama bersama ✨</h2>
+        <div class="photo-grid grid-3">
+          <div class="photo-grid-item reveal-item" data-delay="0">
+            <img src="assets/images/we1.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="150">
+            <img src="assets/images/we2.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="300">
+            <img src="assets/images/we3.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Blok 2: Perubahan ═══════ -->
+    <section class="story-section" id="section-changes">
+      <div class="story-card">
+        <div class="section-emoji">🦋</div>
+        <h2 class="section-title">Sejak saat itu, banyak hal berubah…</h2>
+        <p class="section-text">
+          Kita sudah melewati begitu banyak hal bersama: tawa dan air mata,
+          obrolan panjang hingga pagi, perjalanan pertama, dan ritual kecil
+          yang kini menjadi <em>hanya milik kita</em>.
+          Setiap hari di sisimu adalah hadiah.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ Video: Alam ═══════ -->
+    <section class="story-section video-section" id="section-video1">
+      <div class="video-card reveal-item">
+        <h2 class="video-title">Petualangan kita di alam 🌿</h2>
+        <div class="video-wrapper">
+          <video src="assets/video/природа.mp4" muted loop playsinline preload="metadata" class="story-video" data-autoplay></video>
+          <div class="video-play-overlay" data-target="video">
+            <span class="play-icon">▶</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Foto-blok 2: Momen bahagia (4 foto) ═══════ -->
+    <section class="story-section photo-grid-section" id="section-grid2">
+      <div class="photo-grid-container">
+        <h2 class="photo-grid-title">Momen-momen bahagia 🥰</h2>
+        <div class="photo-grid grid-4">
+          <div class="photo-grid-item reveal-item" data-delay="0">
+            <img src="assets/images/we4.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="100">
+            <img src="assets/images/we5.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="200">
+            <img src="assets/images/we6.JPG" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="300">
+            <img src="assets/images/we7.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Blok 3: Makna ═══════ -->
+    <section class="story-section" id="section-meaning">
+      <div class="story-card">
+        <div class="section-emoji">💫</div>
+        <h2 class="section-title">Kamu berarti lebih dari sekadar…</h2>
+        <p class="section-text">
+          Kamu adalah sahabat terbaikku, tempat bersandarku, dan rumahku.
+          Bersamamu aku belajar arti <em>mencintai dengan sungguh-sungguh</em>.
+          Kamu mengajarkanku untuk menjadi lebih baik, bermimpi lebih berani,
+          dan menghargai setiap momen.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ Video: Hari lain bersama ═══════ -->
+    <section class="story-section video-section" id="section-video2">
+      <div class="video-card reveal-item">
+        <h2 class="video-title">Hari lain bersama 🌸</h2>
+        <div class="video-wrapper">
+          <video src="assets/video/природа2.mp4" muted loop playsinline preload="metadata" class="story-video" data-autoplay></video>
+          <div class="video-play-overlay" data-target="video">
+            <span class="play-icon">▶</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Foto-blok 3: Kenangan hangat (3 foto) ═══════ -->
+    <section class="story-section photo-grid-section" id="section-grid3">
+      <div class="photo-grid-container">
+        <h2 class="photo-grid-title">Kenangan hangat 💕</h2>
+        <div class="photo-grid grid-3">
+          <div class="photo-grid-item reveal-item" data-delay="0">
+            <img src="assets/images/we8.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="150">
+            <img src="assets/images/we9.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="300">
+            <img src="assets/images/we10.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Blok 4: Hari istimewa ═══════ -->
+    <section class="story-section" id="section-special">
+      <div class="story-card">
+        <div class="section-emoji">✨</div>
+        <h2 class="section-title">Dan hari ini adalah hari yang istimewa…</h2>
+        <p class="section-text">
+          Hari ini adalah hari kita. Hari ketika kita mulai menulis <em>kisah kita</em>.
+          Dan aku ingin kamu tahu: setiap halaman dari kisah ini adalah yang paling kusayangi.
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════ Video: Tarian ═══════ -->
+    <section class="story-section video-section" id="section-video3">
+      <div class="video-card reveal-item">
+        <h2 class="video-title">Tarian kita 💃🕺</h2>
+        <div class="video-wrapper video-compact">
+          <video src="assets/video/танцы.mp4" muted loop playsinline preload="metadata" class="story-video" data-autoplay data-trim-end="5"></video>
+          <div class="video-play-overlay" data-target="video">
+            <span class="play-icon">▶</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Foto-blok 4: Setiap momen (3 foto) ═══════ -->
+    <section class="story-section photo-grid-section" id="section-grid4">
+      <div class="photo-grid-container">
+        <h2 class="photo-grid-title">Setiap momen adalah milik kita 🌹</h2>
+        <div class="photo-grid grid-3">
+          <div class="photo-grid-item reveal-item" data-delay="0">
+            <img src="assets/images/we11.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="150">
+            <img src="assets/images/we12.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+          <div class="photo-grid-item reveal-item" data-delay="300">
+            <img src="assets/images/we.jpg" alt="Momen kita" loading="lazy" />
+            <div class="photo-shine"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ Timer hubungan ═══════ -->
+    <section class="timer-section" id="section-timer">
+      <h2 class="timer-title">Kita sudah bersama… 💙</h2>
+      <div class="timer-container">
+        <div class="timer-block">
+          <div class="timer-value" id="timer-days">0</div>
+          <div class="timer-label">hari</div>
+        </div>
+        <div class="timer-block">
+          <div class="timer-value" id="timer-hours">0</div>
+          <div class="timer-label">jam</div>
+        </div>
+        <div class="timer-block">
+          <div class="timer-value" id="timer-mins">0</div>
+          <div class="timer-label">menit</div>
+        </div>
+        <div class="timer-block">
+          <div class="timer-value" id="timer-secs">0</div>
+          <div class="timer-label">detik</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ PETUNJUK: Cara mengganti foto dan lagu ═══════ -->
+    <section class="story-section" id="section-guide">
+      <div class="story-card">
+        <div class="section-emoji">🛠️</div>
+        <h2 class="section-title">Cara mengganti foto dan lagu</h2>
+        <div class="section-text">
+          <ul>
+            <li>Untuk foto, ganti file gambar di folder assets/images atau ubah alamat gambar pada tag img di file index.html.</li>
+            <li>Untuk lagu, ganti file assets/music.mp3 atau ubah alamat sumber pada tag audio di file index.html.</li>
+            <li>Pastikan nama file yang dipakai sama dengan file yang ada di folder.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════ FINAL: Foto sekarang + pengakuan ═══════ -->
+    <section class="story-section final-section" id="section-final">
+      <div class="final-content">
+        <div class="final-photo-wrapper reveal-item">
+          <img src="assets/images/we_last.jpg" alt="Kami sekarang" class="final-photo" loading="eager" />
+          <div class="final-photo-glow"></div>
+        </div>
+        <div class="final-heart">💖</div>
+        <h2 class="final-title">Selamat ulang tahun, sayang&nbsp;❤️</h2>
+        <p class="final-message">
+          Aku mencintaimu.<br>
+          Hari ini, besok, dan selamanya.
+        </p>
+        <p class="final-signature">— selalu milikmu 💙</p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Music Toggle -->
+  <button class="music-toggle" id="music-toggle" aria-label="Nyalakan/Matikan musik">
+    <div class="equalizer">
+      <div class="eq-bar" style="height:8px"></div>
+      <div class="eq-bar" style="height:14px"></div>
+      <div class="eq-bar" style="height:5px"></div>
+      <div class="eq-bar" style="height:11px"></div>
+    </div>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
